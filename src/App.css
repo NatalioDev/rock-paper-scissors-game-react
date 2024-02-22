@@ -1,0 +1,12 @@
+#root{
+  padding: 2rem;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+}
+
+#root{
+  background: radial-gradient(circle at center top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}

@@ -1,0 +1,51 @@
+.pick{
+    align-self: center;
+    display: grid;
+    column-gap: 4rem;
+    row-gap: 1.1rem;
+    background-image: url("images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 2.7rem;
+}
+
+.btn {
+    width: 100%;
+    max-width: 7.5rem;
+}
+
+.paper{
+    background-color: white;
+    padding: 1.3rem 1.6rem;
+    border: 0.8rem solid hsl(230, 89%, 60%);
+    border-radius: 50%;
+}
+
+.pick-paper{
+    grid-column: 1/2;
+    text-align: left;
+}
+
+.scissors{
+    padding: 1.3rem 1.6rem;
+    padding-bottom: 1.4rem;
+    background-color: white;
+    border-radius: 50%;
+    border: 0.8rem solid hsl(40, 84%, 53%);
+}
+
+.pick-scissors {
+    grid-column: 2/4;
+}
+
+.rock {
+    padding: 1.55rem;
+    background-color: white;
+    border-radius: 50%;
+    border: 0.8rem solid hsl(349, 70%, 56%);
+}
+
+.pick-rock{
+    grid-column: 1/4;
+    justify-self: center;
+}

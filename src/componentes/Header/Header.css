@@ -1,0 +1,44 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 3px solid hsl(217, 16%, 45%);
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 50rem;
+    align-self: center;
+}
+
+.logo {
+    max-width: 7rem;
+    padding: 0.3rem;
+}
+
+.logo-img{
+    width: 100%;
+}
+
+.scored{
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem;
+    align-items: center;
+    justify-content: center;
+    color: hsl(229, 64%, 46%);
+    text-transform: uppercase;
+    background-color: white;
+    border-radius: 0.25rem;
+}
+
+.scored-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+}
+
+#score{
+    font-size: 2rem;
+    text-align: center;
+    color: hsl(229, 25%, 31%);
+    font-weight: 700;
+}
