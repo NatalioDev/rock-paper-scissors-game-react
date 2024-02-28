@@ -42,9 +42,9 @@ function App() {
       <div 
         id={`state-${gameState}`}
         className={`app ${isGameModified ? 'modified' : ''}`}>
-        <MainMenu 
+        {/* <MainMenu 
           setGameState={setGameState}
-          setIsGameModified={setIsGameModified}/>
+          setIsGameModified={setIsGameModified}/> */}
         <Header
           points={isGameModified ? modifiedPoints : classicPoints}
           src={isGameModified ? logoBonus : logo}

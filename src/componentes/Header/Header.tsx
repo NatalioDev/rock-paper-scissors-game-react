@@ -12,8 +12,8 @@ export default function Header({points, src}: Props) {
             <img src={src} id="logo" alt="logo" className="logo-img" />
         </div>
         <div className="scored">
-            <label htmlFor="score" className="scored-label">{points}</label>
-            <p id="score">0</p>
+            <label htmlFor="score" className="scored-label">Score</label>
+            <p id="score">{points}</p>
         </div>
     </header>
   )

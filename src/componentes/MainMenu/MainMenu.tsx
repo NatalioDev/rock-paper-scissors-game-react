@@ -14,12 +14,12 @@ function MainMenu( {setGameState, setIsGameModified} : Props) {
   }
 
   return (
-    <div className="main-menu-cont">
-        <button onClick={() => startGame(false)}>
-            Classic
+    <div className="main-menu-container">
+        <button className="btn-classic" onClick={() => startGame(false)}>
+            Rock <br /> Paper <br /> Scissors
         </button>
-        <button onClick={() => startGame(true)}>
-            Modified
+        <button className="btn-modified" onClick={() => startGame(true)}>
+          Rock <br /> Paper <br /> Scissors <br /> Lizard <br /> Spock
         </button>
     </div>
   )
