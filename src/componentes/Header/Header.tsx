@@ -1,15 +1,20 @@
 import "./Header.css"
 
-export default function Header() {
+type Props = {
+  points: number,
+  src: string,
+}
+
+export default function Header({points, src}: Props) {
   return (
-    <div className="header">
+    <header className="header">
         <div className="logo">
-            <img src="images/logo.svg" id="logo" alt="logo" className="logo-img" />
+            <img src={src} id="logo" alt="logo" className="logo-img" />
         </div>
         <div className="scored">
-            <label htmlFor="score" className="scored-label">Score</label>
+            <label htmlFor="score" className="scored-label">{points}</label>
             <p id="score">0</p>
         </div>
-    </div>
+    </header>
   )
 }

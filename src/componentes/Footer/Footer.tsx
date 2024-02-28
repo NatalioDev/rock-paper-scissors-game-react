@@ -1,14 +1,49 @@
+import { useState } from "react"
 import "./Footer.css"
+import { iconClose, imageRules, imageRulesBonus } from "../../assets/assets";
 
-export default function Footer() {
+type Props = {
+  setGameState: (value: number) => void,
+  isGameModified: boolean | undefined,
+}
+
+export default function Footer({setGameState, isGameModified}: Props) {
+
+  const [rulesOpen, setRulesOpen] = useState(false);
+
+  const returnToMenu = () => {
+    setGameState(0)
+  }
+
   return (
-    <div className="footer">
+    <>
+      <div id="footer-game">
         <button 
-            id="rules-btn"
-            className="rules-btn rules-toggle"
-            >
+          id="menu-btn"
+          onClick={() => returnToMenu()}
+          className="menu-btn menu-toggle"
+          >
+            Menu
+        </button>
+        <button 
+          id="rules-btn"
+          onClick={() => setRulesOpen(true)}
+          className="rules-btn rules-toggle"
+          >
             Rules
         </button>
-    </div>
+      </div>
+      {rulesOpen ? (
+        <div id="game-rules-footer">
+          <div className="container-footer">
+            <p>Rules</p>
+            <img id="rules-image" src={isGameModified ? imageRulesBonus : imageRules} alt="" />
+            <img id="close-image" src={iconClose} alt="" onClick={() =>setRulesOpen(false)} />
+          </div>
+        </div>
+      ):(
+        ''
+      )}
+    </>
   )
 }
