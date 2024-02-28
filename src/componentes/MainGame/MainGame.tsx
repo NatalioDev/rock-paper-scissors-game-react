@@ -1,6 +1,13 @@
+// Hooks
 import { useEffect, useState } from "react"
+
+// styles
 import "./MainGame.css"
+
+// Functions Logic
 import { getAIChoice, options, whoIsWinner } from "../../logicGame";
+
+// Assets
 import { bgPentagon, bgTriangle, gameThings } from "../../assets/assets";
 
 type Props = {

@@ -1,0 +1,101 @@
+#player-choose{
+    max-width: 100vw;
+    position: absolute;
+    left: 50%;
+    aspect-ratio: 313/278;
+    width: 68vw;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    transition: all 1s ease-in-out;
+}
+
+#bg-img{
+    width: 100%;
+    height: 100%;
+    transition: all 1s ease-in-out;
+}
+
+img{
+    display: block;
+}
+
+#player-choose .item-0{
+    left: 50%;
+    top: 100%;
+}
+
+#player-choose .item-1{
+    left: 0;
+    top: 0;
+}
+
+#player-choose .item-2{
+    left: 100%;
+    top: 0;
+}
+
+#player-choose .item{
+    transform: translate(-50%, -50%);
+    position: absolute;
+    cursor: pointer;
+    transition: all 1s ease-in-out;
+}
+
+.item{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    box-shadow: inset 0 -4px #0000004d;
+}
+
+.item-0 {
+    background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+.item-1 {
+    background: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+}
+
+.item-2 {
+    background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+}
+
+.item div{
+    display: flex;
+    width: 80px;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 100%;
+    box-shadow: inset 0 4px #0000004d;
+}
+
+.item div img{
+    width: 50px;
+    height: 50px;
+}
+
+#play-again{
+    position: absolute;
+    width: 70vw;
+    max-width: 500px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+    transition: all 1s ease-in-out;
+}
+
+#state-0 #play-again,
+#state-1 #play-again,
+#state-2 #play-again,
+#state-3 #play-again,
+#state-4 #play-again{
+    bottom: -20vh;
+}
