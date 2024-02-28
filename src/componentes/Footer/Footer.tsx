@@ -1,5 +1,10 @@
+// Hook
 import { useState } from "react"
+
+// Styles
 import "./Footer.css"
+
+// Assets
 import { iconClose, imageRules, imageRulesBonus } from "../../assets/assets";
 
 type Props = {
