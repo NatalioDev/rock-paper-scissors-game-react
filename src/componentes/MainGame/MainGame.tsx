@@ -24,19 +24,36 @@ export default function MainGame({ isGameModified, points, setPoints, gameState,
     const [AIChoice, setAIChoice] = useState<number>();
     const [winner, setWinner] = useState<string>();
 
-    const playerChooseFunction = (index: number) =>{
-        setPlayerChoice(index)
-        isGameModified !== undefined ? setAIChoice(getAIChoice(isGameModified)) : '';
+    // Modificación momentanea 
+    const playerChooseFunction = (index: number) => {
+        setPlayerChoice(index);
+        setAIChoice(getAIChoice(false)); // Ignorar isGameModified
         setGameState(3);
-
-        setTimeout(() =>{
-            setGameState(4)
-        }, 1500)
-
+    
         setTimeout(() => {
-            setGameState(5)
-        }, 3000)
-    }
+            setGameState(4);
+        }, 1500);
+    
+        setTimeout(() => {
+            setGameState(5);
+        }, 3000);
+    };
+    
+
+    // const playerChooseFunction = (index: number) =>{
+    //     setPlayerChoice(index)
+    //     console.log("isGameModified:", isGameModified);
+    //     isGameModified !== undefined ? setAIChoice(getAIChoice(isGameModified)) : '';
+    //     setGameState(3);
+
+    //     setTimeout(() =>{
+    //         setGameState(4)
+    //     }, 1500)
+
+    //     setTimeout(() => {
+    //         setGameState(5)
+    //     }, 3000)
+    // }
 
     const reset = () => {
         setAIChoice(undefined);
@@ -58,9 +75,15 @@ export default function MainGame({ isGameModified, points, setPoints, gameState,
 
     useEffect(() => {
         if(playerChoice !== undefined && AIChoice !== undefined){
-            setWinner(whoIsWinner(playerChoice, AIChoice))
+            const winnerResult = whoIsWinner(playerChoice, AIChoice);
+            console.log("Winner:", winnerResult); // Agregar este console.log
+        
+            console.log(whoIsWinner)
+            
+            setWinner(winnerResult);
         }
     }, [playerChoice, AIChoice]);
+    
 
     useEffect(() =>{
         if(gameState !== 5) return
@@ -69,12 +92,13 @@ export default function MainGame({ isGameModified, points, setPoints, gameState,
         }else if(winner === 'AI'){
             setPoints(points - 1);
         }
-    },[winner, gameState])
+        console.log(winner)
+    },[winner, gameState, setPoints, points])
 
 
   return (
     <>
-        <div id="player-choose">
+        <div id="player-chooses">
             <div className={`${gameState === 5 && winner === 'Player' ? 'winner' : ''}`}></div>
             <img 
                 id="bg-img"
@@ -113,7 +137,7 @@ export default function MainGame({ isGameModified, points, setPoints, gameState,
                 }
             })}
         </div>
-        <div className={`${gameState === 5 && winner === "AI" ? 'winner' : ''}`}>
+        <div id="ai-choice" className={`${gameState === 5 && winner === "AI" ? 'winner' : ''}`}>
             {gameState <= 4 ? (
                 <div className="waiting"></div>
             ): gameState === 5 ? (
@@ -127,8 +151,10 @@ export default function MainGame({ isGameModified, points, setPoints, gameState,
             )}
         </div>
 
-        <div id="play-again">
-            <p>{winner === 'Player' ? "You Win" : winner === 'AI' ? "You Lose" : winner === 'Draw' ? "Draw" : '' }</p>
+        <div id="play-again" >
+        {winner !== undefined && (
+        <p>{winner === 'Player' ? "You Win" : winner === 'AI' ? "You Lose" : winner === 'Draw' ? "Draw" : '' }</p>
+    )}
             <button onClick={() => reset()}>Play Again</button>
         </div>
     </>

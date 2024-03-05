@@ -1,10 +1,15 @@
-
+// Hooks
 import { useEffect, useState } from 'react'
+// Styles
 import './App.css'
+
+//Components
 import Footer from './componentes/Footer/Footer'
 import Header from './componentes/Header/Header'
 import MainMenu from './componentes/MainMenu/MainMenu'
 import MainGame from './componentes/MainGame/MainGame'
+
+// Assets
 import { logo, logoBonus } from './assets/assets'
 
 function App() {
@@ -16,11 +21,11 @@ function App() {
   let loaded = false;
 
   useEffect(() => {
-    const classicLoalPoints = Number(localStorage.getItem('classicPoints'));
-    const modifiedLoalPoints = Number(localStorage.getItem('modifiedPoints'));
+    const classicLocalPoints = Number(localStorage.getItem('classicPoints'));
+    const modifiedLocalPoints = Number(localStorage.getItem('modifiedPoints'));
 
-    if(classicLoalPoints !== null) setClassicPoints(classicLoalPoints);
-    if(modifiedLoalPoints !== null) setModifiedPoints(modifiedLoalPoints);
+    if(classicLocalPoints !== null) setClassicPoints(classicLocalPoints);
+    if(modifiedLocalPoints !== null) setModifiedPoints(modifiedLocalPoints);
 
     loaded = true;
 

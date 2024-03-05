@@ -13,3 +13,51 @@
   padding: 1rem;
   position: relative;
 }
+
+#state-3 #player-chooses .item,
+#state-4 #player-chooses .item,
+#state-5 #player-chooses .item{
+    left: 50%;
+    top: 50%;
+    cursor: default;
+}
+
+#state-3 .chosen,
+#state-4 .chosen,
+#state-5 .chosen{
+    z-index: 999;
+}
+
+#state-4 #ai-choice,
+#state-5 #ai-choice{
+    left: 75%;
+}
+#state-0 #play-again,
+#state-1 #play-again,
+#state-2 #play-again,
+#state-3 #play-again,
+#state-4 #play-again{
+    bottom: -20vh;
+}
+
+#state-4 #player-chooses,
+#state-5 #player-chooses{
+    top: 50%;
+    left: 25%;
+}
+
+#state-3 #player-chooses,
+#state-4 #player-chooses,
+#state-5 #player-chooses{
+    width: 100px;
+    border-radius: 100%;
+}
+
+#state-3 #player-chooses
+#bg-img,
+#state-4 #player-chooses
+#bg-img,
+#state-5 #player-chooses
+#bg-img{
+    scale: 0;
+}
