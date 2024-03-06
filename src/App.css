@@ -14,6 +14,26 @@
   position: relative;
 }
 
+#state-0 #player-chooses,
+#state-1 #player-chooses{
+    left: -100vw;
+}
+
+#state-0 .header,
+#state-1 .header{
+    left: -100vw;
+}
+
+#state-0 #footer-game,
+#state-1 #footer-game{
+    left: -100vw;
+}
+
+#state-0 .main-menu-container{
+    top: 0;
+}
+
+
 #state-3 #player-chooses .item,
 #state-4 #player-chooses .item,
 #state-5 #player-chooses .item{

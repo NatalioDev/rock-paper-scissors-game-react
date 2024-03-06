@@ -25,35 +25,35 @@ export default function MainGame({ isGameModified, points, setPoints, gameState,
     const [winner, setWinner] = useState<string>();
 
     // Modificación momentanea 
-    const playerChooseFunction = (index: number) => {
-        setPlayerChoice(index);
-        setAIChoice(getAIChoice(false)); // Ignorar isGameModified
-        setGameState(3);
-    
-        setTimeout(() => {
-            setGameState(4);
-        }, 1500);
-    
-        setTimeout(() => {
-            setGameState(5);
-        }, 3000);
-    };
-    
-
-    // const playerChooseFunction = (index: number) =>{
-    //     setPlayerChoice(index)
-    //     console.log("isGameModified:", isGameModified);
-    //     isGameModified !== undefined ? setAIChoice(getAIChoice(isGameModified)) : '';
+    // const playerChooseFunction = (index: number) => {
+    //     setPlayerChoice(index);
+    //     setAIChoice(getAIChoice(false)); // Ignorar isGameModified
     //     setGameState(3);
-
-    //     setTimeout(() =>{
-    //         setGameState(4)
-    //     }, 1500)
-
+    
     //     setTimeout(() => {
-    //         setGameState(5)
-    //     }, 3000)
-    // }
+    //         setGameState(4);
+    //     }, 1500);
+    
+    //     setTimeout(() => {
+    //         setGameState(5);
+    //     }, 3000);
+    // };
+    
+
+    const playerChooseFunction = (index: number) =>{
+        setPlayerChoice(index)
+        console.log("isGameModified:", isGameModified);
+        isGameModified !== undefined ? setAIChoice(getAIChoice(isGameModified)) : '';
+        setGameState(3);
+
+        setTimeout(() =>{
+            setGameState(4)
+        }, 1500)
+
+        setTimeout(() => {
+            setGameState(5)
+        }, 3000)
+    }
 
     const reset = () => {
         setAIChoice(undefined);

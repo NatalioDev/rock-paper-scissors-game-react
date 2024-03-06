@@ -8,6 +8,7 @@
     position: absolute;
     transform: translate(-50%);
     left: 50%;
+    top: -100vh;
     gap: 1rem;
     transition: all 1s ease-in-out;
 }
@@ -24,6 +25,3 @@
     color: #fff;
 }
 
-#state-0 .main-menu-container{
-    top: 0;
-}
