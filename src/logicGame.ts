@@ -19,21 +19,16 @@ const getAIChoice = (modified: boolean) => {
     return number
 };
 
-const whoIsWinner = (playerChoice: number, AIChoice: number) => {
-    if(playerChoice === AIChoice){
+const whoIsWinner = (PlayerChoice: number, AIChoice: number) => {
+    if(PlayerChoice === AIChoice){
         return 'Draw';
     } else {
-        const playerOption = options[playerChoice];
-        const AIOption = options[AIChoice];
-        for (let i = 0; i < beating.length; i++) {
-            if (beating[i][0] === playerOption && beating[i][1] === AIOption) {
-                return 'Player';
-            } else if (beating[i][0] === AIOption && beating[i][1] === playerOption) {
-                return 'AI';
-            }
+        if(beating[PlayerChoice].includes(options[AIChoice])){
+            return "Player"
+        }else{
+            return "AI"
         }
     }
-    return 'Draw'; // En caso de que no haya ganador ni empate
 };
 
 

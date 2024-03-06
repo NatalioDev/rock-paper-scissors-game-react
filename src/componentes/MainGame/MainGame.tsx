@@ -24,21 +24,6 @@ export default function MainGame({ isGameModified, points, setPoints, gameState,
     const [AIChoice, setAIChoice] = useState<number>();
     const [winner, setWinner] = useState<string>();
 
-    // Modificación momentanea 
-    // const playerChooseFunction = (index: number) => {
-    //     setPlayerChoice(index);
-    //     setAIChoice(getAIChoice(false)); // Ignorar isGameModified
-    //     setGameState(3);
-    
-    //     setTimeout(() => {
-    //         setGameState(4);
-    //     }, 1500);
-    
-    //     setTimeout(() => {
-    //         setGameState(5);
-    //     }, 3000);
-    // };
-    
 
     const playerChooseFunction = (index: number) =>{
         setPlayerChoice(index)
@@ -75,25 +60,19 @@ export default function MainGame({ isGameModified, points, setPoints, gameState,
 
     useEffect(() => {
         if(playerChoice !== undefined && AIChoice !== undefined){
-            const winnerResult = whoIsWinner(playerChoice, AIChoice);
-            console.log("Winner:", winnerResult); // Agregar este console.log
-        
-            console.log(whoIsWinner)
-            
-            setWinner(winnerResult);
+            setWinner(whoIsWinner(playerChoice, AIChoice))
         }
     }, [playerChoice, AIChoice]);
     
 
-    useEffect(() =>{
+    useEffect(() => {
         if(gameState !== 5) return
-        if(winner === 'Player') {
+        if(winner === "Player"){
             setPoints(points + 1);
-        }else if(winner === 'AI'){
+        }else if (winner === "AI"){
             setPoints(points - 1);
         }
-        console.log(winner)
-    },[winner, gameState, setPoints, points])
+    }, [winner, gameState]);
 
 
   return (
