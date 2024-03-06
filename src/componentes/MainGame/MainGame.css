@@ -63,6 +63,14 @@ img{
     background: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
 }
 
+.item-3 {
+    background: linear-gradient(hsl(261,73%,60%),hsl(261,72%,63%));
+}
+
+.item-4 {
+    background: linear-gradient(hsl(189,59%,53%),hsl(189,58%,57%));
+}
+
 .item div{
     display: flex;
     width: 80px;
