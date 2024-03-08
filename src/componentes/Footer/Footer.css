@@ -1,62 +1,70 @@
+/* Estilos para el footer del juego */
 #footer-game{
-    width: 90vw;
-    bottom: 1rem;
-    transform: translate(-50%);
-    left: 50%;
-    max-width: 1200px;
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    transition: all 1s ease-in-out;
+    width: 90vw; /* Ancho del 90% del viewport*/
+    bottom: 1rem; /* Distancia inferior de 1rem*/
+    transform: translate(-50%); /* Centrar horizontalmente*/
+    left: 50%; /* Centrar horizontalmente*/
+    max-width: 1200px; /* Ancho máximo de 1200px*/
+    position: absolute; /* Posición absoluta*/
+    display: flex; /* Mostrar como flexbox*/
+    justify-content: space-around; /* Distribuir el espacio entre los elementos*/
+    transition: all 1s ease-in-out; /* Trnsición suave*/
 }
 
+/* Estilos para los botones dentro del footer*/
 #footer-game button{
-    background: none;
-    font-size: 20px;
-    line-height: 30px;
-    padding: .5rem 1rem;
-    border-radius: .5rem;
-    border: 3px solid hsl(217, 16%, 45%);
-    cursor: pointer;
-    transition: all 1s ease-in-out;
-    color: #fff;
+    background: none; /* Fondo transparenet*/
+    font-size: 20px; /* Tamaño de la fuente*/
+    line-height: 30px; /* Altura de línea*/
+    padding: .5rem 1rem; /* Espaciado interno*/
+    border-radius: .5rem; /* Borde redondeado*/
+    border: 3px solid hsl(217, 16%, 45%); /* Borde sólido con color*/
+    cursor: pointer; /* Cambiar el cursor al de puntero*/
+    transition: all 1s ease-in-out; /* Transición suave*/
+    color: #fff; /* Color del texto*/
 }
 
+/* Estilos para el contenedor de las reglas del juego */
 #game-rules-footer{
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background: white;
-    left: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: absolute; /* Posición absoluta*/
+    width: 100vw; /* Ancho del viewport*/
+    height: 100vh; /* Altura del viewport*/
+    background: white; /* Fondo blanco*/
+    left: 0; /* Posicionamiento en la esquina izquierda*/
+    top: 0; /* Posicionamiento en la esquina superior*/
+    display: flex; /* Mostrar como flexbox*/
+    align-items: center; /* Centrar verticalmente*/
+    justify-content: center; /* Centrar horizontalmente*/
 }
 
+/* Estilos para el contenedor de las reglas del juego */
 .container-footer{
-    background: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    gap: 1rem;
+    background: white; /* Fondo blanco*/
+    display: flex; /* Mostrar como flexbox*/
+    flex-direction: column; /* Dirección de la columna*/
+    align-items: center; /* Centrar verticalmente*/
+    justify-content: space-evenly; /* Distribuir espacio uniformemente*/
+    gap: 1rem; /* Espaciado entre elementos*/
 }
 
+/* Estilos para el título de las reglas del juego */
 .container-footer p{
-    color: #3b4363;
-    font-size: 38px;
-    font-weight: 700;
+    color: #3b4363; /* Color del texto*/
+    font-size: 38px; /* Tamaño de la fuente*/
+    font-weight: 700; /* Peso de la fuente*/
 }
 
+/* Estilos generales para las imágenes */
 img{
-    display: block;
+    display: block; /* Mostrar como bloque*/
 }
 
+/* Estilos para la imagen de las reglas del juego */
 #rules-image{
-    width: 90vmin;
+    width: 90vmin; /* Ancho del 90% del tamaño minimo del viewport*/
 }
 
+/* Estilos para el icono de cerrar las reglas del juego */
 #close-image{
-    cursor: pointer;
+    cursor: pointer; /* Cambiar el cursor al de puntero*/
 }

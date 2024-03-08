@@ -1,94 +1,101 @@
+/* Estilos para el elemento raíz de la aplicación */
 #root{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: center;
-  color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    color: #fff; /*Color de texto  */
 }
 
-
+/* Estilos generales de la aplicación */
 .app {
-  min-height: 100vh;
-  background: radial-gradient(hsl(214,47%,23%),hsl(237,49%,15%));
-  overflow: hidden;
-  padding: 1rem;
-  position: relative;
+  min-height: 100vh; /* Altura mínima de la aplicación*/
+  background: radial-gradient(hsl(214,47%,23%),hsl(237,49%,15%)); /* Fondo degradado radial*/
+  overflow: hidden; /* Ocultar el desbordamiento*/
+  padding: 1rem; /* Espaciado interno*/
+  position: relative; /* Posición relativa*/
 }
 
+/* Estilos para ocultar elementos en los diferentes estados del juego*/
 #state-0 #player-chooses,
 #state-1 #player-chooses{
-    left: -100vw;
+    left: -100vw; /* Ocultar fuera de la pantalla*/
 }
 
 #state-0 .header,
 #state-1 .header{
-    left: -100vw;
+    left: -100vw; /* Ocultar fuera de la pantalla*/
 }
 
 #state-0 #footer-game,
 #state-1 #footer-game{
-    left: -100vw;
+    left: -100vw; /* Ocultar fuera de la pantalla*/
 }
+
+/*Fin de estilos para ocultar elementos*/
 
 #state-0 .main-menu-container{
-    top: 0;
+    top: 0; /* Posicionamiento en la parte superior*/
 }
 
-
+/* Estilos para diferentes estados del juego*/
 #state-3 #player-chooses .item,
 #state-4 #player-chooses .item,
 #state-5 #player-chooses .item{
-    left: 50%;
-    top: 50%;
-    cursor: default;
+    left: 50%; /* Centrar horizontalmente*/
+    top: 50%; /* Centrar verticalmente*/
+    cursor: default; /* Cambiar el cursor a predeterminados*/
 }
 
 #state-3 .chosen,
 #state-4 .chosen,
 #state-5 .chosen{
-    z-index: 999;
+    z-index: 999; /* Índice Z alto para destacar*/
 }
 
 #state-4 #ai-choice,
 #state-5 #ai-choice{
-    left: 75%;
+    left: 75%; /* Posicionamiento*/
 }
 #state-0 #play-again,
 #state-1 #play-again,
 #state-2 #play-again,
 #state-3 #play-again,
 #state-4 #play-again{
-    bottom: -20vh;
+    bottom: -20vh; /* Posicionamiento*/
 }
 
 #state-4 #player-chooses,
 #state-5 #player-chooses{
-    top: 50%;
-    left: 25%;
+    top: 50%; /* Posicionamiento*/
+    left: 25%;/* Posicionamiento*/
 }
 
 #state-3 #player-chooses,
 #state-4 #player-chooses,
 #state-5 #player-chooses{
-    width: 100px;
-    border-radius: 100%;
+    width: 100px; /* Ancho*/
+    border-radius: 100%; /* Borde circular*/
 }
 
+/* Estilos para las imagenes de fondo*/
 #state-3 #player-chooses
 #bg-img,
 #state-4 #player-chooses
 #bg-img,
 #state-5 #player-chooses
 #bg-img{
-    scale: 0;
+    scale: 0; /* Escalar a 0*/
 }
 
+/* Estilos para la aplicación modificada*/
 .app.modified #player-chooses{
-    aspect-ratio: 329/313;
+    aspect-ratio: 329/313; /* Relación de aspecto*/
 }
 
+/* Estilos de posicionamiento */
 .app.modified #player-chooses .item-0{
-    left: calc(66% + 40px);
+    left: calc(66% + 40px); 
     top: calc(100% - 16px);
 }
 
@@ -111,8 +118,9 @@
     left: 5%;
     top: 40%;
 }
+/* Fin de estilos de posicionamiento*/
 
-
+/* Estilos de los items del juego modificado*/
 .app.modified .item{
     width: 80px;
     height: 80px;
@@ -129,12 +137,15 @@
     width: 40px;
     height: 40px;
 }
+/* Fin de los estilos de los items*/
 
+/* Estilos del ganador en el juego modificado*/
 .app.modified .winner {
     width: 80px;
     box-shadow: 0 0 40px #fff;
 }
 
+/* Estilos del item de la IA en el juego modificado*/
 .app.modified #ai-choice {
     width: 80px;
     height: 80px;

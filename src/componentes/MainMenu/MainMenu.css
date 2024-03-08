@@ -1,27 +1,29 @@
+/* Estilos para el contenedor del menú principal */
 .main-menu-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    transform: translate(-50%);
-    left: 50%;
-    top: -100vh;
-    gap: 1rem;
-    transition: all 1s ease-in-out;
+    display: flex; /* Mostrar como flexbox*/
+    justify-content: center; /* Centrar horizontalmente*/
+    align-items: center; /* Centrar verticalmente*/
+    flex-direction: column; /* Dirección de la columna*/
+    height: 100vh; /* Altura del 100% del viewport*/
+    width: 100vw; /* Ancho del 100% del viewport*/
+    position: absolute; /* Posición absoluta*/
+    transform: translate(-50%); /* Centrar horizontalmente*/
+    left: 50%; /* Centrar horizontalmente*/
+    top: -100vh; /* Posicionamiento fuera de la pantalla hacia arriba*/
+    gap: 1rem; /* Espaciado entre elementos*/
+    transition: all 1s ease-in-out; /* Trnsición suave*/
 }
 
+/* Estilos para los botones dentro del menú principal */
 .main-menu-container button{
-    padding: 1.5rem;
-    border-radius: 1rem;
-    border: solid 4px hsl(27, 16%, 45%);
-    background: none;
-    text-transform: uppercase;
-    font-size: 22px;
-    line-height: 150%;
-    cursor: pointer;
-    color: #fff;
+    padding: 1.5rem; /* Espaciado interno*/
+    border-radius: 1rem; /* Borde redondeado*/
+    border: solid 4px hsl(27, 16%, 45%); /* Borde sólido con color*/
+    background: none; /* Fondo transparente*/
+    text-transform: uppercase; /* Transformar texto a mayúscula*/
+    font-size: 22px; /* Tamaño de la fuente*/
+    line-height: 150%; /* Altura de línea*/
+    cursor: pointer; /* Cambiar el cursor al de puntero*/
+    color: #fff; /* Color del texto*/
 }
 
