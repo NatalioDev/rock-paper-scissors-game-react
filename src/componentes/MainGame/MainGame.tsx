@@ -87,11 +87,11 @@ export default function MainGame({ isGameModified, points, setPoints, gameState,
     <>
         {/* Contenedor de la elección del jugador */}
         <div id="player-chooses">
-            <div className={`${gameState === 5 && winner === 'Player' ? 'winner' : ''}`}></div>
+            <div className={`${gameState === 5 && winner === 'Player' ? 'winner' : ''}`}></div> {/* Actúa como un marcador visual si el jugador gana */}
             {/* Fondo del contenedor */}
             <img 
                 id="bg-img"
-                src={isGameModified ? bgPentagon : bgTriangle}
+                src={isGameModified ? bgPentagon : bgTriangle} //Muestra el fondo dinamicamente
                 alt={isGameModified ? 'bgPentagon' : 'bgTriangle'} />
                 {/* Renderizado de las opciones de juego */}
             {gameThings.map((i, index) => {
@@ -103,9 +103,9 @@ export default function MainGame({ isGameModified, points, setPoints, gameState,
                                 onClick={() => {
                                     playerChooseFunction(index);
                                 }}
-                                className={`item item-${index} ${index === playerChoice ? 'chosen' : ''}`}>
+                                className={`item item-${index} ${index === playerChoice ? 'chosen' : ''}`}> {/*Aplica la clase chosen dinamicamente */}
                                     <div>
-                                        <img src={i} alt={options[index]} />
+                                        <img src={i} alt={options[index]} /> {/* Muestra la opcion del array seleccionado del modo de juego */}
                                     </div>
                                 </div>
                         )
@@ -128,13 +128,16 @@ export default function MainGame({ isGameModified, points, setPoints, gameState,
             })}
         </div>
         {/* Contenedor de la elcción de la IA */}
-        <div id="ai-choice" className={`${gameState === 5 && winner === "AI" ? 'winner' : ''}`}>
+        <div id="ai-choice" className={`${gameState === 5 && winner === "AI" ? 'winner' : ''}`}>{/* Actúa como un marcador visual si el jugador gana */}
             {gameState <= 4 ? (
-                <div className="waiting"></div>
+                /* Actúa como un marcador que se muestra si demora en cargar las opciones */
+                <div className="waiting"></div> 
             ): gameState === 5 ? (
                 <div className={`item item-${AIChoice}`}>
                     <div>
-                        <img src={AIChoice !== undefined ? gameThings[AIChoice] : ''} alt={AIChoice !== undefined ? options[AIChoice] : ''} />
+                        <img 
+                            src={AIChoice !== undefined ? gameThings[AIChoice] : ''} // Es responsable de mostrar la imagen correspondiente a la elección de la IA
+                            alt={AIChoice !== undefined ? options[AIChoice] : ''} />
                     </div>
                 </div>
             ):(
@@ -144,7 +147,7 @@ export default function MainGame({ isGameModified, points, setPoints, gameState,
         {/* Contendor para volver a jugar */}
         <div id="play-again" >
         {winner !== undefined && (
-        <p>{winner === 'Player' ? "You Win" : winner === 'AI' ? "You Lose" : winner === 'Draw' ? "Draw" : '' }</p>
+        <p>{winner === 'Player' ? "You Win" : winner === 'AI' ? "You Lose" : winner === 'Draw' ? "Draw" : '' }</p> //Responsable de mostrar correctamente el mensaje sobre el resultado del juego
     )}
             <button onClick={() => reset()}>Play Again</button>
         </div>
