@@ -1,24 +1,28 @@
+/* Estilos para el contenedor principal de las opciones de jugador */
 #player-chooses{
-    max-width: 100vw;
-    position: absolute;
-    left: 50%;
-    aspect-ratio: 313/278;
-    width: 68vw;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    transition: all 1s ease-in-out;
+    max-width: 100vw; /* Ancho máximo igual al ancho de la ventana*/
+    position: absolute; /* Posición absoluta*/
+    left: 50%; /* Posicionamiento horizontal centrado*/
+    aspect-ratio: 313/278; /* Relación de aspecto*/
+    width: 68vw; /* Ancho*/
+    transform: translate(-50%, -50%); /* Centrar verticalmente y horizontalmente*/
+    top: 50%; /* Posicionamiento vertical centrado*/
+    transition: all 1s ease-in-out; /* Transición suave de todo los cambios durante 1s*/
 }
 
+/* Estilos para la imagen de fondo */
 #bg-img{
-    width: 100%;
-    height: 100%;
-    transition: all 1s ease-in-out;
+    width: 100%; /* Ancho al 100%*/
+    height: 100%; /* Altura al 100%*/
+    transition: all 1s ease-in-out; /* Transición suave*/
 }
 
+/* Estilos para todas las iamgenes */
 img{
-    display: block;
+    display: block; /* Mostrar como bloque*/
 }
 
+/* Estilos para el posicionamiento de las opciones de juego */
 #player-chooses .item-0{
     left: 50%;
     top: 100%;
@@ -33,24 +37,28 @@ img{
     left: 100%;
     top: 0;
 }
+/* Fin de los estilos de posicionamiento */
 
+/* Estilos para las opciones del juego generales (Transición)*/
 #player-chooses .item{
-    transform: translate(-50%, -50%);
-    position: absolute;
-    cursor: pointer;
-    transition: all 1s ease-in-out;
+    transform: translate(-50%, -50%); /* Oculta las opciones del juego*/
+    position: absolute; /* Posicion absoluta*/
+    cursor: pointer; /* Cambia el cursor a puntero*/
+    transition: all 1s ease-in-out; /* Transición suave*/
 }
 
+/* Estilos generales para todas las opciones de juego */
 .item{
-    display: flex;
-    width: 100px;
-    height: 100px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    box-shadow: inset 0 -4px #0000004d;
+    display: flex; /* Display flexbox*/
+    width: 100px; /* Ancho*/
+    height: 100px; /* Alto*/
+    justify-content: center; /* Centrar horizontalmente*/
+    align-items: center; /* Centrar verticalmente*/
+    border-radius: 100%; /* Borde circular*/
+    box-shadow: inset 0 -4px #0000004d; /* Sombra interna*/
 }
 
+/* Estilos específicos para cada opción de juego */
 .item-0 {
     background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
 }
@@ -70,82 +78,89 @@ img{
 .item-4 {
     background: linear-gradient(hsl(189,59%,53%),hsl(189,58%,57%));
 }
+/* Fin de estilos específicos */
 
+/* Estilos para el contenido dentro de las opciones de juego */
 .item div{
-    display: flex;
-    width: 80px;
-    height: 80px;
-    justify-content: center;
-    align-items: center;
-    background: white;
-    border-radius: 100%;
-    box-shadow: inset 0 4px #0000004d;
+    display: flex; /* Mostrar como flexbox*/
+    width: 80px; /* Ancho*/
+    height: 80px; /* Altura*/
+    justify-content: center; /* Centrar horizontalmente*/
+    align-items: center; /* Centrar verticalmente*/
+    background: white; /* Fondo blanco*/
+    border-radius: 100%; /* Borde circular*/
+    box-shadow: inset 0 4px #0000004d; /* Sombra interna*/
 }
 
+/* Estilos para las imágenes dentro de las opciones de juego */
 .item div img{
     width: 50px;
     height: 50px;
 }
 
+/* Estilos para el contenedor de volver a jugar*/
 #play-again{
-    position: absolute;
-    width: 70vw;
-    max-width: 500px;
-    left: 50%;
-    transform: translate(-50%);
-    display: flex;
-    bottom: 20vh;
-    flex-direction: column;
-    align-items: center;
-    gap: .5rem;
-    transition: all 1s ease-in-out;
+    position: absolute; /* Posición absoluta*/
+    width: 70vw; /* Ancho máximo*/
+    max-width: 500px; /* Ancho máximo*/
+    left: 50%; /* Posicionamiento horizontal centrado*/
+    transform: translate(-50%); /* Centrar horizontalmente*/
+    display: flex; /* Mostrar como flexbox*/
+    bottom: 20vh; /* Distancia desde la parte inferior*/
+    flex-direction: column; /* Dirección de columnas para flexbox*/
+    align-items: center; /* Centrar horizontalmente*/
+    gap: .5rem; /* Espaciado entre elementos*/
+    transition: all 1s ease-in-out; /* Transición suave*/
 }
 
+/* Estilos para el texto dentro del contenedor de volver a jugar */
 #play-again p{
-    font-size: 40px;
+    font-size: 40px; /* Tamaño de fuente*/
 }
 
+/* Estilos para el botón dentro del contenedor de volver a jugar */
 #play-again button{
-    color: #3b4363;
-    font-size: 18px;
-    background: white;
-    border: none;
-    padding: .75rem 3rem;
-    width: 100%;
-    border-radius: 1rem;
-    cursor: pointer;
-    transition: all 1s ease-in-out;
+    color: #3b4363; /* Color del texto*/
+    font-size: 18px; /* Tamaño de fuente*/
+    background: white; /* Fondo blanco*/
+    border: none; /* Sin borde*/
+    padding: .75rem 3rem; /* Espaciado interno*/
+    width: 100%; /* Ancho al 100%*/
+    border-radius: 1rem; /* Borde redondeado*/
+    cursor: pointer; /* Cursor de puntero*/
+    transition: all 1s ease-in-out; /* Transición suave*/
 }
 
-
-
+/* Estilos para el fondo de las opciones de juego */
 #player-chooses #bg-img{
-    width: 100%;
-    height: 100%;
-    transition: all 1s ease-in-out;
+    width: 100%; /* Ancho al 100%*/
+    height: 100%; /* Alto al 100%*/
+    transition: all 1s ease-in-out; /* Transición suave*/
 }
 
+/* Estilos para el contendor de la elección de la IA */
 #ai-choice{
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 150vw;
-    top: 50%;
-    display: flex;
-    width: 100px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    transition: all 1s ease-in-out;
+    position: absolute; /* Posición absoluta*/
+    transform: translate(-50%, -50%); /* Centrar vertical y horizontalmente*/
+    left: 150vw; /* Posicionamiento fuera de la vista hacia la derecha*/
+    top: 50%; /* Posicionamiento vertical centrado*/
+    display: flex; /* Mostrar como flexbox*/
+    width: 100px; /* Ancho*/
+    justify-content: center; /* Centrar horizontalmente*/
+    align-items: center; /* Centrar verticalmente*/
+    border-radius: 100%; /* Borde circular*/
+    transition: all 1s ease-in-out; /* Transicion suave*/
 }
 
+/* Estilos para el efecto de ganador */
 .winner{
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    aspect-ratio: 1/1;
-    width: 100px;
-    border-radius: 100%;
-    box-shadow: 0 0 50px 10px #fff;
-    transition: box-shadow .1s ease-in-out !important;
+    position: absolute; /* Posición absoluta*/
+    transform: translate(-50%, -50%); /* Centrar vertical y horizontalmente*/
+    left: 50%; /* Posicionamiento horizantal centrado*/
+    top: 50%; /* Posicionamiento vertical centrado*/
+    aspect-ratio: 1/1; /* Relación de aspecto cuadrada*/
+    width: 100px; /* Ancho*/
+    border-radius: 100%; /* Borde circular*/
+    box-shadow: 0 0 50px 10px #fff; /* Sombra con resplandor*/
+    transition: box-shadow .1s ease-in-out !important; /* Trnasición suave de la sombra durante 0.1s*/
 }
