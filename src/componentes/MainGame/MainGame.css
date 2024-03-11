@@ -164,3 +164,11 @@ img{
     box-shadow: 0 0 50px 10px #fff; /* Sombra con resplandor*/
     transition: box-shadow .1s ease-in-out !important; /* Trnasición suave de la sombra durante 0.1s*/
 }
+
+@media (min-width: 718px) {
+    #player-chooses{
+        width: auto;
+        height: auto;
+        top: 65%;
+    }
+}

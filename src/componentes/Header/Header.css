@@ -5,7 +5,7 @@
     top: 1rem; /* Distancia superior a 1rem*/
     transform: translate(-50%); /* Centrar horizontalmente*/
     left: 50%; /* Centrar horizontalmente*/
-    max-width: 100vw; /* Ancho máximo del viewport*/
+    max-width: 1000px; /* Ancho máximo del viewport*/
     position: absolute; /* Posición absoluta*/
     justify-content: space-between; /* Justificar elementos a ambos lados*/
     align-items: center; /* Centrar verticalmente*/
@@ -61,4 +61,26 @@ img{
     font-size: 36px;
     color: hsl(229, 25%, 31%);
     font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .header{
+        top: 2rem;
+    }
+
+    .logo-img{
+        width: 136px;
+    }
+
+    .scored-label{
+    font-size: 18px;
+    }
+
+    .scored {
+        font-size: 54px;
+    }
+
+    .app.modified .logo-img{
+        width: 90px !important; /* Ancho de la imagen del logo en la aplicación modificada*/
+    }
 }

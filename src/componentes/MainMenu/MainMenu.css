@@ -16,9 +16,9 @@
 
 /* Estilos para los botones dentro del menú principal */
 .main-menu-container button{
-    padding: 1.5rem; /* Espaciado interno*/
+    padding: 1.5rem 3.5rem; /* Espaciado interno*/
     border-radius: 1rem; /* Borde redondeado*/
-    border: solid 4px hsl(27, 16%, 45%); /* Borde sólido con color*/
+    border: solid 4px hsl(217, 16%, 45%); /* Borde sólido con color*/
     background: none; /* Fondo transparente*/
     text-transform: uppercase; /* Transformar texto a mayúscula*/
     font-size: 22px; /* Tamaño de la fuente*/
@@ -27,3 +27,16 @@
     color: #fff; /* Color del texto*/
 }
 
+@media (min-width: 718px) {
+    .main-menu-container{
+        flex-direction: row;
+        gap: 4rem;
+    }
+}
+
+
+@media (min-width: 1280px) {
+    .main-menu-container{
+        gap: 6rem;
+    }
+}
